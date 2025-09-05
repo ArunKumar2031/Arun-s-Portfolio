@@ -30,6 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+        
 
 }
 .navbar > h2{
@@ -81,32 +82,54 @@ body{
 }
 .about-section 
 {
-    height: 90vh;
+    height: 60vh;
 }
 div >.head
 {
     margin-left: 50px;
+    text-align: center;
+    margin-right: 550px;
 }
-.about-section > div>.profile-img >img
-{
-    height: 150px;
-    width:150px;
-    display: inline;
-
-}
-.about-section >div>p{
+/* flex container for image + text */
+.about-section > div > .profile-container {
     display: flex;
-}
-.social-menu
-{
-    margin-top: 100px;
+    align-items: center;       /* vertically center */
+    justify-content: center; /* image left, text right */
+    gap: 100px;
+    margin-top: 20px;
 
 }
-.social-menu > a{
 
+/* profile image */
+.about-section > div > .profile-container > .profile-img img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;        /* makes it circular */
+    object-fit: cover;
+    flex-shrink: 0;            /* prevent image from shrinking */
+}
+
+/* profile text */
+.about-section > div > .profile-container > .profile-text {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.6;
+    flex: 1;                   /* let text take remaining space */
+}
+
+/* social links */
+.social-menu {
+    
+    text-align: center;
+    justify-content: center;
+    margin-left: 120px;
+
+}
+
+.social-menu > a {
+    
     text-decoration: none;
-    margin: 0px 10px;
-    border: 2px solid green;
-    border-radius: 6px;
+    margin-right: 20px; /* space between icon and text */
+    vertical-align: middle;
     
 }
