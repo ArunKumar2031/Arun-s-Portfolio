@@ -21,7 +21,7 @@ body{
 .header
 {
         background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-        height:80vh;
+        height:90vh;    
 
 
 }
@@ -62,4 +62,51 @@ body{
     background-color: white;
     cursor: pointer;
     color: grey;
+}
+.name
+{
+     display: flex;
+     flex-direction: column;
+     text-align: center;   
+     justify-content: center;
+     align-items: center;
+
+}
+.name > h1
+{
+    font-size: 80px;
+    margin: 0;
+    color: white;
+
+}
+.about-section 
+{
+    height: 90vh;
+}
+div >.head
+{
+    margin-left: 50px;
+}
+.about-section > div>.profile-img >img
+{
+    height: 150px;
+    width:150px;
+    display: inline;
+
+}
+.about-section >div>p{
+    display: flex;
+}
+.social-menu
+{
+    margin-top: 100px;
+
+}
+.social-menu > a{
+    
+    text-decoration: none;
+    margin: 0px 10px;
+    border: 2px solid green;
+    border-radius: 6px;
+    color: ;
 }
