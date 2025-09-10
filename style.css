@@ -88,15 +88,15 @@ body {
 }
 
 .hero>.profile {
-    height: 150px;
-    width: 150px;
-    border-radius: 150px;
+    height: 200px;
+    width:200px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-left: 650px;
-    box-shadow: -2px 1px 5px lightgreen;
+    box-shadow: 1px 1px -1px -1px  ;
 
 }
 
