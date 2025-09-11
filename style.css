@@ -241,8 +241,7 @@ body {
 }
 
 /* Hover effect */
-.scard:hover,
-.card:hover {
+.skill-grid>.card:hover {
 
     transform: translateY(-8px);
     box-shadow: 0px 0px 9px 0px wheat;
@@ -250,31 +249,23 @@ body {
     margin: 10px 10px;
     background-color: whitesmoke;
     border-radius: 6px;
-
-
-
-
 }
 
 /* Icons */
-.card i,
-.card i {
+.skill-grid>.card i{
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #00d4ff;
-    /* accent color */
+    color: #00d4ff; /* accent color */
     transition: color 0.5s ease;
 }
 
 /* Icon hover color */
-.card:hover i,
-.card:hover i {
+.skill-grid>.card:hover i {
     color: #6a11cb;
 }
 
 /* Text under icons */
-.card p,
-.card p {
+.skill-grid>.card>p {
     font-size: 1.1rem;
     font-weight: bold;
     color: white;
@@ -284,9 +275,9 @@ body {
 
 /* Contact me section */
 .contactme-section {
-    height: 60vh;
+    
     display: flex;
-    margin-top: 20px;
+    margin-top: 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -311,7 +302,7 @@ body {
 }
 
 .contact-form>input,
-.contact-form>.feedback {
+.contact-form>#feedback {
     padding: 10px;
     margin: 10px 0;
     width: 350px;
@@ -347,4 +338,80 @@ body {
 .address>i {
     margin-right: 10px;
     color: #0f2027;
+}
+
+/* Project Section */
+.projects {
+    height: 100vh;
+    padding: 30px 20px;
+    text-align: center;   
+}
+
+.projects > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 100px;
+    color: white;
+}
+
+.projects > p {
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: repeat(3, 400px); /* fixed card width */
+    gap: 30px;  /* space between cards */
+    justify-content: center; /* center the whole grid */
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+.project-card > .card {
+    background: white;
+    padding: 20px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.project-card > .card >button
+{
+    background-color: #6a11cb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 15px;
+    
+}
+.project-card > .card >button:hover
+{
+    box-shadow: 0px 0px 9px 0px black;
+}
+
+
+.project-card > .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 9px 0px wheat;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.project-card > .card > img {
+    height: 150px;
+    width: 150px;
+    border-radius: 9px;
+    margin-bottom: 30px;
+}
+.project-card > .card>p
+{
+   font-size: 16px;
+   color: #0f2027;
 }
