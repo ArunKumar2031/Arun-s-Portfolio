@@ -8,7 +8,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
 
 }
@@ -35,8 +36,7 @@ body {
 }
 
 .header>.navbar>div>button {
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px aqua;
+    border-radius: 15px;
     padding: 10px;
 
 }
@@ -44,12 +44,14 @@ body {
 #resume:hover {
     background-color: lightgoldenrodyellow;
     cursor: pointer;
+    box-shadow: 0px 0px 9px 0px white;
 
 }
 
 .header>.navbar>div>a:hover {
     color: whitesmoke;
     text-shadow: 1px 1px 2px blue;
+    font-weight: bold;
 
 }
 
@@ -89,14 +91,14 @@ body {
 
 .hero>.profile {
     height: 200px;
-    width:200px;
-    border-radius: 50px;
+    width: 200px;
+    border-radius: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-left: 650px;
-    box-shadow: 1px 1px -1px -1px  ;
+    box-shadow: 0px 0px 9px 0px white;
 
 }
 
@@ -110,6 +112,7 @@ body {
     display: flex;
 
 }
+
 .hero>.profile-summary>h3 {
     align-items: center;
     justify-content: center;
@@ -124,6 +127,7 @@ body {
     margin-right: -550px;
     padding: 10px;
     border-radius: 7px;
+    font-weight: bold;
 
 
 }
@@ -137,15 +141,18 @@ body {
 
 .hero>.profile-summary>#viewwork:hover {
     box-shadow: 2px 2px 2px grey;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .hero>.profile-summary>#contact:hover {
     box-shadow: 2px 2px 2px grey;
     background-color: black;
-    color: aliceblue;
+    color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .hero>.profile-summary>p {
@@ -183,44 +190,47 @@ body {
 
 .hero>.profile-summary>.social-menu>.link:hover {
     transform: scale(1.1);
-    color: lightskyblue;
+    color: black;
 }
 
 .hero>.profile-summary>.social-menu>.link {
     margin-right: 0.5rem;
     /* space between icon and text */
 }
+
 /* --- Skills Section --- */
 .skill-section {
     padding: 50px 20px;
     text-align: center;
-    background: #f8f9fa;   /* light background */
     height: 80vh;
+
 }
 
 .skill-section h1 {
     font-size: 2.5rem;
     margin-top: 10px;
-    color: #333;
-    
+    color: white;
+
 }
 
 /* Grid layout */
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(3, 300px);  /* fixed card width */
-    gap: 40px;                                /* more gap between cards */
-    justify-content: center;                  /* center the whole grid */
+    grid-template-columns: repeat(3, 200px);
+    /* fixed card width */
+    gap: 30px;
+    /* more gap between cards */
+    justify-content: center;
+    /* center the whole grid */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 5px;
 
 }
 
 /* Skill Cards */
-.skill-card> .card {
+.skill-grid>.card {
     background: white;
-
-    padding: 30px 20px;
+    padding: 20px 10px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -231,30 +241,110 @@ body {
 }
 
 /* Hover effect */
-.skill-card:hover,.card:hover {
-    
+.scard:hover,
+.card:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 30px ;
+    box-shadow: 0px 0px 9px 0px wheat;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+
+
+
+
 }
 
 /* Icons */
-.skill-card i, .card i {
+.card i,
+.card i {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #00d4ff;   /* accent color */
-    transition: color 0.3s ease;
+    color: #00d4ff;
+    /* accent color */
+    transition: color 0.5s ease;
 }
 
 /* Icon hover color */
-.skill-card:hover i, .card:hover i {
-    color: #0077ff;
+.card:hover i,
+.card:hover i {
+    color: #6a11cb;
 }
 
 /* Text under icons */
-.skill-card p, .card p {
+.card p,
+.card p {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #444;
+    color: white;
     margin: 0;
+    color: #0f2027;
+}
+
+/* Contact me section */
+.contactme-section {
+    height: 60vh;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactme-section>h1,
+.contactme-section>p {
+    text-align: center;
+}
+
+.contactme-section>.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    /* space between form and address */
+    margin-top: 40px;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.contact-form>input,
+.contact-form>.feedback {
+    padding: 10px;
+    margin: 10px 0;
+    width: 350px;
+    border-radius: 8px;
+    background-color: white;
+    color: #592AD7;
+    border: none;
+    outline: none;
+}
+
+.contact-form>#message {
+    padding: 10px 30px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form>#message:hover {
+    box-shadow: 0px 0px 9px 0px white;
+    border: none;
+    color: #6a11cb;
+    font-weight: bold;
+}
+
+.address {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    line-height: 3;
+    font-weight: bold;
+}
+
+.address>i {
+    margin-right: 10px;
+    color: #0f2027;
 }
