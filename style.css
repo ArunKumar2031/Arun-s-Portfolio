@@ -35,18 +35,30 @@ body {
     color: black;
 }
 
-.header>.navbar>div>button {
+.header>.navbar>div>#resume {
     border-radius: 15px;
     padding: 10px;
+    border: none;          /* optional: cleaner button */
+}
+
+/* Make anchor behave like button wrapper */
+.header>.navbar>div>a {
+    text-decoration: none; /* remove underline */
 
 }
 
+/* Hover effect you already had */
 #resume:hover {
-    background-color: lightgoldenrodyellow;
+    background-color: white;
     cursor: pointer;
     box-shadow: 0px 0px 9px 0px white;
-
+    border-radius: 9px;
+    border: none;
+    padding: 10px;
+    color: #6a11cb;
+    font-weight: bold;
 }
+
 
 .header>.navbar>div>a:hover {
     color: whitesmoke;
@@ -56,7 +68,7 @@ body {
 }
 
 .hero {
-    height: 80vh;
+    height: 100vh;
 }
 
 /* Animation */
@@ -96,7 +108,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 150px;
     margin-left: 650px;
     box-shadow: 0px 0px 9px 0px white;
 
@@ -200,9 +212,10 @@ body {
 
 /* --- Skills Section --- */
 .skill-section {
+
     padding: 50px 20px;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 
 }
 
@@ -283,9 +296,12 @@ body {
     justify-content: center;
 }
 
-.contactme-section>h1,
+.contactme-section>h1{
+    margin-top: 50px;
+}
 .contactme-section>p {
     text-align: center;
+    
 }
 
 .contactme-section>.content {
@@ -350,7 +366,6 @@ body {
 .projects > h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-top: 100px;
     color: white;
 }
 

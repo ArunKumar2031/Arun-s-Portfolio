@@ -22,16 +22,22 @@
         <nav class="navbar">
             <h2>Portfolio</h2>
             <div>
-                <a href="Home">Home</a>
-                <a href="profile-container">About</a>
-                <a href="skills">Skills</a>
-                <a href="Projects">Projects</a>
-                <a href="#contactme-section ">Contact</a>
-                <button id="resume">Resume</button>
+                <a href="#hero">Home</a>
+                <a href="#hero">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contactme">Contact</a>
+
 
             </div>
+            <div>
+                <a href="Assets/Arun_dev.pdf" download>
+                    <button id="resume">Resume</button>
+                </a>
+            </div>
+
         </nav>
-        <section class="hero">
+        <section class="hero" id="hero">
             <img class="profile" src="Assets/Images/profile.png" alt="profile">
             <div class="profile-summary">
                 <h1>Hello Everyone, This is Arunkumar </h1>
@@ -58,7 +64,7 @@
                 </div>
             </div>
         </section>
-        <section class="skill-section">
+        <section class="skill-section" id="skills">
             <h1>My Skills</h1>
             <div class="skill-grid">
                 <div class="card">
@@ -99,68 +105,68 @@
                 </div>
             </div>
         </section>
-<section class="projects">
-    <h1>Projects</h1>
-    <p>Here are some of my Projects </p>
-    <div class="project-card">
-        
-        <div class="card">
-            <img src="Assets/Images/e-voting.png" alt="e-voting-img">
-            <h3>E-Voting System</h3>
-            <p>This project allows the users to vote using digital
-                wallets and the system was deployed in one of the
-                test nets ensuring the privacy and transparency.
-            </p>
-            <button>Get the Project</button>
-        </div>
-        
-        <div class="card">
-            <img src="Assets/Images/webpentest.png" alt="webpentest-img">
-            <h3>Web Pentest</h3>
-            <p>This project performs penetration test on a website
-                and report is generated with vulnerabilities. It was
-                implemented using MERN stack.
-            </p>
-            <button>Get the Project</button>
-        </div>
-        
-        <div class="card">
-            <img src="Assets/Images/crop.png" alt="crop_model-img">
-            <h3>Predictive analytics For Soil Productivity</h3>
-            <p>Developed a machine learning model using
-                clustering techniques to analyze soil data and
-                recommend optimal crops, enhancing sustainable
-                agriculture outcomes
-            </p>
-            <button>Get the Project</button>
-        </div>
-        
-    </div>
-</section>
+        <section class="projects" id="projects">
+            <h1>Projects</h1>
+            <p>Here are some of my Projects </p>
+            <div class="project-card">
 
-        <section class="contactme-section" id="contact-me">
+                <div class="card">
+                    <img src="Assets/Images/e-voting.png" alt="e-voting-img">
+                    <h3>E-Voting System</h3>
+                    <p>This project allows the users to vote using digital
+                        wallets and the system was deployed in one of the
+                        test nets ensuring the privacy and transparency.
+                    </p>
+                    <button>Get the Project</button>
+                </div>
+
+                <div class="card">
+                    <img src="Assets/Images/webpentest.png" alt="webpentest-img">
+                    <h3>Web Pentest</h3>
+                    <p>This project performs penetration test on a website
+                        and report is generated with vulnerabilities. It was
+                        implemented using MERN stack.
+                    </p>
+                    <button>Get the Project</button>
+                </div>
+
+                <div class="card">
+                    <img src="Assets/Images/crop.png" alt="crop_model-img">
+                    <h3>Predictive analytics For Soil Productivity</h3>
+                    <p>Developed a machine learning model using
+                        clustering techniques to analyze soil data and
+                        recommend optimal crops, enhancing sustainable
+                        agriculture outcomes
+                    </p>
+                    <button>Get the Project</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contactme-section" id="contactme">
             <h1>Contact Me</h1>
             <p>I would love to hear from you!</p>
             <div class="content">
                 <form action="" class="contact-form">
-                    <input type="text" placeholder="Enter your  Name" class="name"  required> <br>
+                    <input type="text" placeholder="Enter your  Name" class="name" required> <br>
                     <input type="email" placeholder="Enter your Email" class="email" required> <br>
                     <textarea name="message" id="feedback" rows="5" placeholder="Message"></textarea><br>
                     <button id="message">Send Message</button>
                 </form>
-             
-            <div class="address">
-                <i class="fa-solid fa-phone"></i> +91 6383967242 <br>
-                <i class="fa-solid fa-envelope"></i> arunkumarcse19@gmail.com <br>
-                <i class="fa-solid fa-location-crosshairs"></i> IIT Colony,Pallikarani,Chennai <br>
 
-            </div>
+                <div class="address">
+                    <i class="fa-solid fa-phone"></i> +91 6383967242 <br>
+                    <i class="fa-solid fa-envelope"></i> arunkumarcse19@gmail.com <br>
+                    <i class="fa-solid fa-location-crosshairs"></i> IIT Colony,Pallikarani,Chennai <br>
+
+                </div>
             </div>
         </section>
         <section class="projects">
 
         </section>
-        
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

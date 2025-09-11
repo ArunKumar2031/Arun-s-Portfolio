@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Story+Script&display=swap');
+
+:root {
+    --font: font-family: "Libertinus Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+
+}
+
+.header>.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.header>.navbar>h2 {
+    margin-right: 700px;
+}
+
+.header>.navbar>div>a {
+
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.header>.navbar>div>#resume {
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    /* optional: cleaner button */
+}
+
+/* Make anchor behave like button wrapper */
+.header>.navbar>div>a {
+    text-decoration: none;
+    /* remove underline */
+
+}
+
+/* Hover effect you already had */
+#resume:hover {
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 0px white;
+    border-radius: 9px;
+    border: none;
+    padding: 10px;
+    color: #6a11cb;
+    font-weight: bold;
+}
+
+
+.header>.navbar>div>a:hover {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px blue;
+    font-weight: bold;
+
+}
+
+.hero {
+    height: 100vh;
+}
+
+/* Animation */
+
+.hero>.profile-summary>h1,
+.hero>.profile-summary>p,
+.hero>.profile-summary>button,
+.hero>.profile-summary>.social-menu {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero>.profile-summary>p {
+    animation-delay: 0.3s;
+}
+
+.hero>.profile-summary>button {
+    animation-delay: 0.6s;
+}
+
+.hero>.profile-summary>.social-menu {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero>.profile {
+    height: 200px;
+    width: 200px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-left: 650px;
+    box-shadow: 0px 0px 9px 0px white;
+
+}
+
+.hero>.profile-summary {
+    margin-top: 50px;
+}
+
+.hero>.profile-summary>h1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.hero>.profile-summary>h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.hero>.profile-summary>button {
+    display: inline;
+    align-items: center;
+    margin-left: 600px;
+    margin-right: -550px;
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: bold;
+
+
+}
+
+.hero>.profile-summary>#viewwork {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+
+}
+
+.hero>.profile-summary>#viewwork:hover {
+    box-shadow: 2px 2px 2px grey;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero>.profile-summary>#contact:hover {
+    box-shadow: 2px 2px 2px grey;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero>.profile-summary>p {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Libertinus Sans", sans-serif;
+}
+
+.hero>.profile-summary>.social-menu {
+    margin-top: 2rem;
+    display: flex;
+    /* enable flexbox on parent */
+    justify-content: center;
+    /* center all links in one line */
+    align-items: center;
+    /* vertically center */
+    gap: 1.5rem;
+    /* space between each link */
+}
+
+.hero>.profile-summary>.social-menu>.link {
+    display: flex;
+    /* keep icon + text inline-flex */
+    align-items: center;
+    /* vertically center icon + text */
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    margin-right: 20px;
+    gap: 0.50rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero>.profile-summary>.social-menu>.link:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.hero>.profile-summary>.social-menu>.link {
+    margin-right: 0.5rem;
+    /* space between icon and text */
+}
+
+/* --- Skills Section --- */
+.skill-section {
+
+    padding: 50px 20px;
+    text-align: center;
+    height: 100vh;
+
+}
+
+.skill-section h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: white;
+
+}
+
+/* Grid layout */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    /* fixed card width */
+    gap: 30px;
+    /* more gap between cards */
+    justify-content: center;
+    /* center the whole grid */
+    margin: 0 auto;
+    padding: 10px 5px;
+
+}
+
+/* Skill Cards */
+.skill-grid>.card {
+    background: white;
+    padding: 20px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect */
+.skill-grid>.card:hover {
+
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 9px 0px wheat;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+}
+
+/* Icons */
+.skill-grid>.card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    /* accent color */
+    transition: color 0.5s ease;
+}
+
+/* Icon hover color */
+.skill-grid>.card:hover i {
+    color: #6a11cb;
+}
+
+/* Text under icons */
+.skill-grid>.card>p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    color: #0f2027;
+}
+
+/* Contact me section */
+.contactme-section {
+
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactme-section>h1,
+.contactme-section>p {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contactme-section>.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    /* space between form and address */
+    margin-top: 40px;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.contact-form>input,
+.contact-form>#feedback {
+    padding: 10px;
+    margin: 10px 0;
+    width: 350px;
+    border-radius: 8px;
+    background-color: white;
+    color: #592AD7;
+    border: none;
+    outline: none;
+}
+
+.contact-form>#message {
+    padding: 10px 30px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form>#message:hover {
+    box-shadow: 0px 0px 9px 0px white;
+    border: none;
+    color: #6a11cb;
+    font-weight: bold;
+}
+
+.address {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    line-height: 3;
+    font-weight: bold;
+}
+
+.address>i {
+    margin-right: 10px;
+    color: #0f2027;
+}
+
+/* Project Section */
+.projects {
+    height: 100vh;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.projects>h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 50px;
+}
+
+.projects>p {
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    /* fixed card width */
+    gap: 30px;
+    /* space between cards */
+    justify-content: center;
+    /* center the whole grid */
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+.project-card>.card {
+    background: white;
+    padding: 20px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card>.card>button {
+    background-color: #6a11cb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 15px;
+
+}
+
+.project-card>.card>button:hover {
+    box-shadow: 0px 0px 9px 0px black;
+}
+
+
+.project-card>.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 9px 0px wheat;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.project-card>.card>img {
+    height: 150px;
+    width: 150px;
+    border-radius: 9px;
+    margin-bottom: 30px;
+}
+
+.project-card>.card>p {
+    font-size: 16px;
+    color: #0f2027;
+}
