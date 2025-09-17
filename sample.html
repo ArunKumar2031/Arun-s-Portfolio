@@ -38,14 +38,12 @@ body {
 .header>.navbar>div>#resume {
     border-radius: 15px;
     padding: 10px;
-    border: none;
-    /* optional: cleaner button */
+    border: none;          /* optional: cleaner button */
 }
 
 /* Make anchor behave like button wrapper */
 .header>.navbar>div>a {
-    text-decoration: none;
-    /* remove underline */
+    text-decoration: none; /* remove underline */
 
 }
 
@@ -71,7 +69,13 @@ body {
 
 .hero {
     height: 100vh;
+    display: flex;              /* Enable flexbox */
+    align-items: center;        /* Vertically center profile + summary */
+    justify-content: center;    /* Center content horizontally */
+    gap: 50px;                  /* Space between profile and summary */
+    padding: 50px;
 }
+
 
 /* Animation */
 
@@ -106,18 +110,17 @@ body {
 .hero>.profile {
     height: 200px;
     width: 200px;
+    margin: 0;
     border-radius: 80px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
-    margin-left: 650px;
     box-shadow: 0px 0px 9px 0px white;
 
 }
 
 .hero>.profile-summary {
-    margin-top: 50px;
+    max-width: 700px;           /* Prevents text from stretching too wide */
+    text-align: center;         /* Align text to left */
+    margin: 0;
 }
 
 .hero>.profile-summary>h1 {
@@ -137,11 +140,10 @@ body {
 .hero>.profile-summary>button {
     display: inline;
     align-items: center;
-    margin-left: 600px;
-    margin-right: -550px;
     padding: 10px;
     border-radius: 7px;
     font-weight: bold;
+    margin: 15px;
 
 
 }
@@ -267,11 +269,10 @@ body {
 }
 
 /* Icons */
-.skill-grid>.card i {
+.skill-grid>.card i{
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #00d4ff;
-    /* accent color */
+    color: #00d4ff; /* accent color */
     transition: color 0.5s ease;
 }
 
@@ -291,18 +292,18 @@ body {
 
 /* Contact me section */
 .contactme-section {
-
+    
     display: flex;
-    margin-top: 100px;
+    margin-bottom: 80px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.contactme-section>h1,
+
 .contactme-section>p {
     text-align: center;
-    margin-top: 50px;
+    
 }
 
 .contactme-section>.content {
@@ -361,17 +362,16 @@ body {
 .projects {
     height: 100vh;
     padding: 30px 20px;
-    text-align: center;
+    text-align: center;   
 }
 
-.projects>h1 {
+.projects > h1 {
     text-align: center;
     font-size: 2.5rem;
     color: white;
-    margin-top: 50px;
 }
 
-.projects>p {
+.projects > p {
     text-align: center;
     font-size: 24px;
 
@@ -379,17 +379,14 @@ body {
 
 .project-card {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    /* fixed card width */
-    gap: 30px;
-    /* space between cards */
-    justify-content: center;
-    /* center the whole grid */
+    grid-template-columns: repeat(3, 400px); /* fixed card width */
+    gap: 30px;  /* space between cards */
+    justify-content: center; /* center the whole grid */
     margin: 0 auto;
     padding: 10px 5px;
 }
 
-.project-card>.card {
+.project-card > .card {
     background: white;
     padding: 20px 10px;
     border-radius: 12px;
@@ -400,23 +397,23 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-.project-card>.card>button {
+.project-card > .card >button
+{
     background-color: #6a11cb;
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 9px;
     padding: 10px 15px;
-
+    
 }
-
-.project-card>.card>button:hover {
+.project-card > .card >button:hover
+{
     box-shadow: 0px 0px 9px 0px black;
 }
 
 
-.project-card>.card:hover {
+.project-card > .card:hover {
     transform: translateY(-8px);
     box-shadow: 0px 0px 9px 0px wheat;
     background-color: whitesmoke;
@@ -424,14 +421,14 @@ body {
     cursor: pointer;
 }
 
-.project-card>.card>img {
+.project-card > .card > img {
     height: 150px;
     width: 150px;
     border-radius: 9px;
     margin-bottom: 30px;
 }
-
-.project-card>.card>p {
-    font-size: 16px;
-    color: #0f2027;
+.project-card > .card>p
+{
+   font-size: 16px;
+   color: #0f2027;
 }
