@@ -1,198 +1,3 @@
-/* --- Responsive CSS --- */
-
-/* --- Global --- */
-:root {
-    --font: font-family: "Libertinus Sans", sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-}
-
-/* --- Navbar --- */
-.header>.navbar {
-    display: flex;
-    flex-wrap: wrap; /* allows stacking on mobile */
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;
-    margin-top: 10px;
-}
-
-.header>.navbar>h2 {
-    margin-right: 0;
-}
-
-.header>.navbar>div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* --- Hero Section --- */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap; /* stack profile + summary on small screens */
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.hero>.profile {
-    height: 200px;
-    width: 200px;
-    border-radius: 80px;
-    box-shadow: 0px 0px 9px 0px white;
-}
-
-.hero>.profile-summary {
-    max-width: 700px;
-    text-align: center;
-}
-
-/* --- Buttons --- */
-.hero>.profile-summary>button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    margin: 0.5rem;
-}
-
-#viewwork {
-    background-color: black;
-    color: white;
-}
-
-#viewwork:hover {
-    box-shadow: 2px 2px 2px grey;
-    background-color: white;
-    color: black;
-}
-
-#contact:hover {
-    box-shadow: 2px 2px 2px grey;
-    background-color: black;
-    color: white;
-}
-
-/* --- Social menu --- */
-.hero>.profile-summary>.social-menu {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* --- Skills Section --- */
-.skill-section {
-    padding: 4rem 1rem;
-    text-align: center;
-    min-height: 100vh;
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    justify-items: center;
-    padding: 1rem;
-}
-
-.skill-grid>.card {
-    width: 100%;
-    max-width: 200px;
-}
-
-/* --- Projects Section --- */
-.projects {
-    padding: 2rem 1rem;
-    text-align: center;
-    min-height: 100vh;
-}
-
-.project-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-}
-
-.project-card>.card>img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-}
-
-/* --- Contact Section --- */
-.contactme-section>.content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.contact-form>input,
-.contact-form>#feedback {
-    width: 100%;
-    max-width: 350px;
-}
-
-/* --- Media Queries --- */
-
-/* Small devices (phones) */
-@media (max-width: 600px) {
-    .hero {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-    .hero>.profile-summary>h1 {
-        font-size: 1.5rem;
-    }
-    .hero>.profile-summary>p {
-        font-size: 1rem;
-    }
-    .skill-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-    .project-card {
-        grid-template-columns: 1fr;
-    }
-    .contactme-section>.content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* Medium devices (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .hero {
-        padding: 2rem;
-        gap: 2rem;
-    }
-    .hero>.profile-summary>h1 {
-        font-size: 2rem;
-    }
-    .hero>.profile-summary>p {
-        font-size: 1.2rem;
-    }
-    .skill-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .project-card {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 @import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Story+Script&display=swap');
 
 :root {
@@ -203,10 +8,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-
 }
 
 .header>.navbar {
@@ -222,7 +25,6 @@ body {
 }
 
 .header>.navbar>div>a {
-
     padding: 10px;
     margin-right: 10px;
     text-decoration: none;
@@ -233,16 +35,15 @@ body {
 .header>.navbar>div>#resume {
     border-radius: 15px;
     padding: 10px;
-    border: none;          /* optional: cleaner button */
+    border: none;
 }
 
 /* Make anchor behave like button wrapper */
 .header>.navbar>div>a {
-    text-decoration: none; /* remove underline */
-
+    text-decoration: none;
 }
 
-/* Hover effect you already had */
+/* Hover effect */
 #resume:hover {
     background-color: white;
     cursor: pointer;
@@ -254,26 +55,24 @@ body {
     font-weight: bold;
 }
 
-
 .header>.navbar>div>a:hover {
     color: whitesmoke;
     text-shadow: 1px 1px 2px blue;
     font-weight: bold;
-
 }
 
 .hero {
-    height: 100vh;
-    display: flex;              /* Enable flexbox */
-    align-items: center;        /* Vertically center profile + summary */
-    justify-content: center;    /* Center content horizontally */
-    gap: 50px;                  /* Space between profile and summary */
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
     padding: 50px;
+    flex-direction: row-reverse; /* 👈 Fix: text first, image second */
 }
 
-
 /* Animation */
-
 .hero>.profile-summary>h1,
 .hero>.profile-summary>p,
 .hero>.profile-summary>button,
@@ -283,17 +82,9 @@ body {
     animation: fadeInUp 1s ease forwards;
 }
 
-.hero>.profile-summary>p {
-    animation-delay: 0.3s;
-}
-
-.hero>.profile-summary>button {
-    animation-delay: 0.6s;
-}
-
-.hero>.profile-summary>.social-menu {
-    animation-delay: 0.9s;
-}
+.hero>.profile-summary>p { animation-delay: 0.3s; }
+.hero>.profile-summary>button { animation-delay: 0.6s; }
+.hero>.profile-summary>.social-menu { animation-delay: 0.9s; }
 
 @keyframes fadeInUp {
     to {
@@ -309,27 +100,19 @@ body {
     border-radius: 80px;
     display: flex;
     box-shadow: 0px 0px 9px 0px white;
-
 }
 
 .hero>.profile-summary {
-    max-width: 700px;           /* Prevents text from stretching too wide */
-    text-align: center;         /* Align text to left */
+    max-width: 700px;
+    text-align: center;
     margin: 0;
 }
 
-.hero>.profile-summary>h1 {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
-}
-
+.hero>.profile-summary>h1,
 .hero>.profile-summary>h3 {
     align-items: center;
     justify-content: center;
     display: flex;
-
 }
 
 .hero>.profile-summary>button {
@@ -339,15 +122,12 @@ body {
     border-radius: 7px;
     font-weight: bold;
     margin: 15px;
-
-
 }
 
 .hero>.profile-summary>#viewwork {
     background-color: black;
     color: white;
     font-weight: bold;
-
 }
 
 .hero>.profile-summary>#viewwork:hover {
@@ -376,27 +156,20 @@ body {
 .hero>.profile-summary>.social-menu {
     margin-top: 2rem;
     display: flex;
-    /* enable flexbox on parent */
     justify-content: center;
-    /* center all links in one line */
     align-items: center;
-    /* vertically center */
     gap: 1.5rem;
-    /* space between each link */
 }
 
 .hero>.profile-summary>.social-menu>.link {
     display: flex;
-    /* keep icon + text inline-flex */
     align-items: center;
-    /* vertically center icon + text */
     color: white;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     text-decoration: none;
     margin-right: 20px;
     gap: 0.50rem;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .hero>.profile-summary>.social-menu>.link:hover {
@@ -406,40 +179,31 @@ body {
 
 .hero>.profile-summary>.social-menu>.link {
     margin-right: 0.5rem;
-    /* space between icon and text */
 }
 
 /* --- Skills Section --- */
 .skill-section {
-
     padding: 50px 20px;
     text-align: center;
-    height: 100vh;
-
+    min-height: 100vh;
+    height: auto;
 }
 
 .skill-section h1 {
     font-size: 2.5rem;
     margin-top: 10px;
     color: white;
-
 }
 
-/* Grid layout */
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(3, 200px);
-    /* fixed card width */
     gap: 30px;
-    /* more gap between cards */
     justify-content: center;
-    /* center the whole grid */
     margin: 0 auto;
     padding: 10px 5px;
-
 }
 
-/* Skill Cards */
 .skill-grid>.card {
     background: white;
     padding: 20px 10px;
@@ -452,53 +216,47 @@ body {
     justify-content: center;
 }
 
-/* Hover effect */
 .skill-grid>.card:hover {
-
     transform: translateY(-8px);
     box-shadow: 0px 0px 9px 0px wheat;
     padding: 10px 10px;
     margin: 10px 10px;
     background-color: whitesmoke;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-/* Icons */
-.skill-grid>.card i{
+.skill-grid>.card i {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #00d4ff; /* accent color */
+    color: #00d4ff;
     transition: color 0.5s ease;
 }
 
-/* Icon hover color */
 .skill-grid>.card:hover i {
     color: #6a11cb;
 }
 
-/* Text under icons */
 .skill-grid>.card>p {
     font-size: 1.1rem;
     font-weight: bold;
-    color: white;
-    margin: 0;
     color: #0f2027;
 }
 
 /* Contact me section */
 .contactme-section {
-    
     display: flex;
     margin-bottom: 80px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 60px;
 }
-
 
 .contactme-section>p {
     text-align: center;
-    
 }
 
 .contactme-section>.content {
@@ -506,7 +264,6 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 60px;
-    /* space between form and address */
     margin-top: 40px;
 }
 
@@ -555,33 +312,33 @@ body {
 
 /* Project Section */
 .projects {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 30px 20px;
-    text-align: center;   
+    text-align: center;
 }
 
-.projects > h1 {
+.projects>h1 {
     text-align: center;
     font-size: 2.5rem;
     color: white;
 }
 
-.projects > p {
+.projects>p {
     text-align: center;
     font-size: 24px;
-
 }
 
 .project-card {
     display: grid;
-    grid-template-columns: repeat(3, 400px); /* fixed card width */
-    gap: 30px;  /* space between cards */
-    justify-content: center; /* center the whole grid */
+    grid-template-columns: repeat(3, 400px);
+    gap: 30px;
+    justify-content: center;
     margin: 0 auto;
     padding: 10px 5px;
 }
 
-.project-card > .card {
+.project-card>.card {
     background: white;
     padding: 20px 10px;
     border-radius: 12px;
@@ -592,23 +349,21 @@ body {
     align-items: center;
     justify-content: center;
 }
-.project-card > .card >button
-{
+
+.project-card>.card>button {
     background-color: #6a11cb;
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 9px;
     padding: 10px 15px;
-    
 }
-.project-card > .card >button:hover
-{
+
+.project-card>.card>button:hover {
     box-shadow: 0px 0px 9px 0px black;
 }
 
-
-.project-card > .card:hover {
+.project-card>.card:hover {
     transform: translateY(-8px);
     box-shadow: 0px 0px 9px 0px wheat;
     background-color: whitesmoke;
@@ -616,14 +371,57 @@ body {
     cursor: pointer;
 }
 
-.project-card > .card > img {
+.project-card>.card>img {
     height: 150px;
     width: 150px;
     border-radius: 9px;
     margin-bottom: 30px;
 }
-.project-card > .card>p
-{
-   font-size: 16px;
-   color: #0f2027;
+
+.project-card>.card>p {
+    font-size: 16px;
+    color: #0f2027;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+    .header>.navbar>h2 {
+        margin-right: 200px;
+    }
+    .project-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header>.navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header>.navbar>h2 {
+        margin-right: 0;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 20px;
+    }
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+    .contactme-section>.content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-form>input,
+    .contact-form>#feedback {
+        width: 100%;
+    }
 }
